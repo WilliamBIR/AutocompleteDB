@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,14 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Pelicula{
-  title   String  @id@db.VarChar(255)
-  rank    Int 
-  id      String  @db.VarChar(10)
-  calif   String  @db.VarChar(2)
+model pelicula {
+  title String @id @db.VarChar(255)
+  rank  Int
+  id    String @db.VarChar(10)
+  calif String @db.VarChar(2)
 }
 
-model Usuario{
-  Nombre  String  @id@db.VarChar(255)
-  Rango   String  @db.VarChar(10)
+model usuario {
+  Nombre String @id @db.VarChar(255)
+  Rango  String @db.VarChar(10)
 }
